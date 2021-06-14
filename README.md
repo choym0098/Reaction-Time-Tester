@@ -1,4 +1,4 @@
-# grpc-learning
+# Reaction-Time-Tester
 
 ## Prerequisites
 - Golang

@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 
-	grpcSetup "github.com/choym0098/grpc-learning/m-highscore/internal/server/grpc"
+	grpcSetup "github.com/choym0098/Reaction-Time-Tester/m-highscore/internal/server/grpc"
 	"github.com/rs/zerolog/log"
 )
 

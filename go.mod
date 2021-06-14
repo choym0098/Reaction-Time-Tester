@@ -1,4 +1,4 @@
-module github.com/choym0098/grpc-learning
+module github.com/choym0098/Reaction-Time-Tester
 
 go 1.16
 

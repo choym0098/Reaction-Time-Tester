@@ -5,7 +5,7 @@ import (
 
 	"net"
 
-	pbhighscore "github.com/choym0098/grpc-learning/m-apis/m-highscore/v1"
+	pbhighscore "github.com/choym0098/Reaction-Time-Tester/m-apis/m-highscore/v1"
 	"github.com/pkg/errors"
 	"github.com/rs/zerolog/log"
 	"google.golang.org/grpc"
