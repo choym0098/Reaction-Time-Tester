@@ -1,4 +1,4 @@
-# Reaction-Time-Tester
+# Reaction-Time-Trainer
 
 ## Prerequisites
 - Golang
