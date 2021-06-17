@@ -14,3 +14,6 @@ On the root directory, run
 ```
 go get ./...
 ```
+
+## How to run
+```
