@@ -2,10 +2,10 @@ package grpc
 
 import (
 	"context"
-
 	"net"
 
-	pbhighscore "github.com/choym0098/Reaction-Time-Trainer/m-apis/m-highscore/v1"
+	pbgameengine "github.com/choym0098/Reaction-Time-Trainer/m-apis/m-game-engine/v1"
+	"github.com/choym0098/Reaction-Time-Trainer/m-game-engine/internal/server/logic"
 	"github.com/pkg/errors"
 	"github.com/rs/zerolog/log"
 	"google.golang.org/grpc"
@@ -16,26 +16,24 @@ type Grpc struct {
 	server  *grpc.Server
 }
 
-var HighScore = 99999999999.0
-
 func NewServer(address string) *Grpc {
 	return &Grpc{
 		address: address,
 	}
 }
 
-func (g *Grpc) SetHighScore(ctx context.Context, input *pbhighscore.SetHighScoreRequest) (*pbhighscore.SetHighScoreResponse, error) {
-	log.Info().Msg("SetHighScore in m-highscore is called")
-	HighScore = input.HighScore
-	return &pbhighscore.SetHighScoreResponse{
-		Set: true,
+func (g *Grpc) GetSize(ctx context.Context, input *pbgameengine.GetSizeRequest) (*pbgameengine.GetSizeResponse, error) {
+	log.Info().Msg("GetSize in m-game-engine called")
+	return &pbgameengine.GetSizeResponse{
+		Size: logic.GetSize(),
 	}, nil
 }
 
-func (g *Grpc) GetHighScore(ctx context.Context, input *pbhighscore.GetHighScoreRequest) (*pbhighscore.GetHighScoreResponse, error) {
-	log.Info().Msg("GetHighScore in m-highscore is called")
-	return &pbhighscore.GetHighScoreResponse{
-		HighScore: HighScore,
+func (g *Grpc) SetScore(ctx context.Context, input *pbgameengine.SetScoreRequest) (*pbgameengine.SetScoreResponse, error) {
+	log.Info().Msg("SetScore in m-game-engine called")
+	set := logic.SetScore(input.Score)
+	return &pbgameengine.SetScoreResponse{
+		Set: set,
 	}, nil
 }
 
@@ -49,7 +47,7 @@ func (g *Grpc) ListenAndServe() error {
 
 	g.server = grpc.NewServer(serverOptions...)
 
-	pbhighscore.RegisterGameServer(g.server, g)
+	pbgameengine.RegisterGameServer(g.server, g)
 
 	log.Info().Str("address", g.address).Msg("starting gRPC server for highscore microservice")
 
