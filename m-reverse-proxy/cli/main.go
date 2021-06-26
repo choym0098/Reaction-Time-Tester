@@ -4,7 +4,6 @@ import (
 	"flag"
 
 	"github.com/choym0098/Reaction-Time-Trainer/m-reverse-proxy/reverseProxy"
-	"github.com/choym0098/m-reverse-proxy/reverseProxy"
 	"github.com/gin-gonic/gin"
 	"github.com/rs/zerolog/log"
 )
