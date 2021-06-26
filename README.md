@@ -15,11 +15,22 @@ On the root directory, run
 go get ./...
 ```
 
-## How to run
+## Running locally
 1. Git clone the repository
 ```
 git clone https://github.com/choym0098/Reaction-Time-Trainer.git
 ```
-2. Open index.html by clicking it
-3. Run each microservice and middleware
-4. Have fun with it
+2. Run high score microservice first by
+```
+go run m-highscore/cli/server/main.go
+```
+3. Run game engine microservice by
+```
+go run m-highscore/cli/server/main.go
+```
+4. Run reverse proxy by
+```
+go run m-reverse-proxy/cli/main.go
+```
+5. Open index.html in a chrome browser (either double click the file in finder or copy and paste the path to index.html into a chrome browser)
+
