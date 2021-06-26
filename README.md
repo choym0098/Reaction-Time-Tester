@@ -31,7 +31,7 @@ go run m-highscore/cli/server/main.go
 ```
 3. Run game engine microservice by
 ```
-go run m-highscore/cli/server/main.go
+go run m-game-engine/cli/server/main.go
 ```
 4. Run reverse proxy by
 ```
