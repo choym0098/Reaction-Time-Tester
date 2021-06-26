@@ -1,4 +1,5 @@
 # Reaction-Time-Trainer
+Fullstack project written in Golang and pure html + JavaScript that utilizes protobuf, microservices and reverse proxy. 
 
 ## Prerequisites
 - Golang
