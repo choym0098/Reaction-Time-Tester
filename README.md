@@ -2,7 +2,7 @@
 Fullstack project written in Golang and html + JavaScript that utilizes gRPC, microservices and reverse proxy. 
 
 Project Architecture Diagram:
-![alt text](https://github.com/choym0098/Reaction-Time-Trainer/Reaction-Time-Trainer-Architecture-Diagram.png?raw=true)
+![alt text](https://github.com/choym0098/Reaction-Time-Trainer/blob/main/Reaction-Time-Trainer-Architecture-Diagram.png?raw=true)
 
 
 ## Prerequisites
