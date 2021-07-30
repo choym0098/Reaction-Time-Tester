@@ -8,6 +8,7 @@ Project Architecture Diagram:
 ## Prerequisites
 - Golang
 - Protobuf and gRPC
+- Ajax
 ```
 brew install protobuf
 go get -u google.golang.org/protobuf
